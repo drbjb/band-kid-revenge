@@ -1,0 +1,375 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://scenes/bandroom1testmaybe.tscn" type="PackedScene" id=1]
+[ext_resource path="res://nodes/player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://images/Locker red.png" type="Texture" id=3]
+[ext_resource path="res://models/Locker.obj" type="ArrayMesh" id=4]
+[ext_resource path="res://materials/door.jpeg" type="Texture" id=5]
+[ext_resource path="res://nodes/eyes.tscn" type="PackedScene" id=6]
+
+[sub_resource type="Environment" id=1]
+background_mode = 1
+fog_color = Color( 0, 0, 0, 1 )
+fog_sun_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="NavigationMesh" id=2]
+vertices = PoolVector3Array( -44.3354, 7.79379, -18.0055, -55.4354, 7.79379, -18.0055, -55.4354, 7.79379, -11.1055, -55.1354, 7.79379, 2.9945, -55.1354, 7.79379, 10.1945, -44.0354, 7.79379, 10.1945, -44.0354, 7.79379, 10.1945, -32.9354, 7.79379, 10.1945, -32.9354, 7.79379, 2.9945, -32.9354, 7.79379, -11.1055, -32.9354, 7.79379, -18.0055, -44.3354, 7.79379, -18.0055, -55.4354, 7.79379, -11.1055, -55.4354, 7.79379, -3.9055, -55.1354, 7.79379, 2.9945, -44.0354, 7.79379, 10.1945, -32.9354, 7.79379, 2.9945, -32.9354, 7.79379, -3.9055, -32.9354, 7.79379, -3.9055, -32.9354, 7.79379, -11.1055, -44.3354, 7.79379, -18.0055, -55.4354, 7.79379, -11.1055, -55.1354, 7.79379, 2.9945, -44.0354, 7.79379, 10.1945, -33.2354, 0.793785, 0.294504, -32.0354, 0.993785, -0.00549698, -32.0354, 0.993785, -1.2055, -55.1354, 0.793785, -7.2055, -57.2354, 0.793785, -6.9055, -57.2354, 0.793785, -5.7055, -57.2354, 0.793785, -5.7055, -57.8354, 0.793785, -5.4055, -57.8354, 0.793785, -3.0055, -57.2354, 0.793785, -5.7055, -57.8354, 0.793785, -3.0055, -55.1354, 0.793785, -2.7055, -55.1354, 0.793785, -7.2055, -44.0354, 0.793785, -17.7055, -54.8354, 0.793785, -17.7055, -55.1354, 0.793785, -7.2055, -32.0354, 0.993785, -1.2055, -31.4354, 0.993785, -1.5055, -31.4354, 0.993785, -8.1055, -32.0354, 0.993785, -1.2055, -31.4354, 0.993785, -8.1055, -33.2354, 0.793785, -8.4055, -33.2354, 0.793785, 0.294504, -55.1354, 0.793785, -7.2055, -54.8354, 0.793785, 3.2945, -44.0354, 0.793785, 9.8945, -33.2354, 0.793785, 0.294504, -33.2354, 0.793785, -8.4055, -44.0354, 0.793785, -17.7055, -55.1354, 0.793785, -7.2055, -55.1354, 0.793785, -2.7055, -54.8354, 0.793785, 3.2945, -54.8354, 0.793785, 3.2945, -54.8354, 0.793785, 9.8945, -44.0354, 0.793785, 9.8945, -33.2354, 0.793785, -8.4055, -33.2354, 0.793785, -17.7055, -44.0354, 0.793785, -17.7055, -44.0354, 0.793785, 9.8945, -33.2354, 0.793785, 9.8945, -33.2354, 0.793785, 0.294504, -78.2355, 4.19379, -7.2055, -78.5354, 3.79379, -9.0055, -79.1354, 3.99379, -9.0055, -78.8354, 4.19379, -1.8055, -70.7354, 4.19379, -2.4055, -69.5354, 4.19379, -2.4055, -70.4354, 4.19379, -7.2055, -71.0354, 4.19379, -1.8055, -70.7354, 4.19379, -2.4055, -70.4354, 4.19379, -7.2055, -78.2355, 4.19379, -7.2055, -78.8354, 4.19379, -1.8055, -31.4354, 5.19379, -8.4055, -31.1354, 5.19379, 0.594503, -21.2354, 5.19379, 0.294504, -20.9354, 5.19379, -8.7055, -10.4354, 5.19379, 0.294504, -10.1354, 5.19379, -8.4055, -20.9354, 5.19379, -8.7055, -21.2354, 5.19379, 0.294504, 16.2646, 5.19379, 0.294504, 22.5646, 5.19379, 0.294504, 22.5646, 5.19379, -8.4055, 16.2646, 5.19379, -8.4055, -1.13544, 5.19379, -8.4055, -0.835442, 5.19379, 0.294504, 9.96455, 5.19379, 0.294504, 10.5646, 5.19379, -8.7055, 16.2646, 5.19379, 0.294504, 16.2646, 5.19379, -8.4055, 10.5646, 5.19379, -8.7055, 9.96455, 5.19379, 0.294504, -8.33544, 5.19379, 0.594503, -8.33544, 5.19379, 2.9945, -2.93545, 5.19379, 2.9945, -2.93545, 5.19379, 0.594503, -10.4354, 5.19379, 0.294504, -8.33544, 5.19379, 0.594503, -2.93545, 5.19379, 0.594503, -0.835442, 5.19379, 0.294504, -1.13544, 5.19379, -8.4055, -10.1354, 5.19379, -8.4055, -26.3354, 0.993785, -1.5055, -26.0354, 0.993785, -0.00549698, -22.4354, 0.993785, -0.00549698, -22.4354, 0.993785, -6.6055, -26.0354, 0.993785, -6.9055, -26.0354, 0.993785, -6.9055, -26.3354, 0.993785, -8.1055, -31.4354, 0.993785, -8.1055, -31.4354, 0.993785, -1.5055, -26.3354, 0.993785, -1.5055, -20.0354, 0.993785, -6.6055, -22.4354, 0.993785, -6.6055, -22.4354, 0.993785, -0.00549698, -16.1354, 0.993785, -0.00549698, -19.7354, 0.993785, -8.1055, -20.0354, 0.993785, -6.6055, -16.1354, 0.993785, -0.00549698, -9.83544, 0.993785, -0.00549698, -9.53545, 0.993785, -8.1055, -3.23544, 0.993785, 0.294504, -1.43545, 0.993785, -0.00549698, -1.43545, 0.993785, -1.2055, -1.43545, 0.993785, -1.2055, -0.835442, 0.993785, -1.5055, -0.835442, 0.993785, -8.1055, -9.53545, 0.993785, -8.1055, -9.83544, 0.993785, -0.00549698, -7.73544, 0.993785, 0.294504, -3.23544, 0.993785, 0.294504, -1.43545, 0.993785, -1.2055, -0.835442, 0.993785, -8.1055, -7.73544, 0.993785, 0.294504, -7.73544, 0.993785, 10.1945, -3.23544, 0.993785, 10.1945, -3.23544, 0.993785, 0.294504, 7.56455, 0.993785, -8.1055, -0.835442, 0.993785, -8.1055, -0.835442, 0.993785, -1.5055, 4.86456, 0.993785, -1.5055, 7.86456, 0.993785, -6.9055, 5.16456, 0.993785, -0.00549698, 13.5646, 0.993785, -0.00549698, 13.5646, 0.993785, -6.6055, 7.86456, 0.993785, -6.9055, 4.86456, 0.993785, -1.5055, 14.1646, 0.993785, -6.9055, 13.5646, 0.993785, -6.6055, 13.5646, 0.993785, -0.00549698, 22.2646, 0.993785, -0.00549698, 22.2646, 0.993785, -1.5055, 21.9646, 0.993785, -8.1055, 21.9646, 0.993785, -8.1055, 14.1646, 0.993785, -8.1055, 14.1646, 0.993785, -6.9055, -63.5354, 4.19379, -7.2055, -70.4354, 4.19379, -7.2055, -69.5354, 4.19379, -2.4055, -63.2354, 4.19379, -2.4055, -63.2354, 4.19379, -2.4055, -56.6354, 4.19379, -2.4055, -56.6354, 4.19379, -7.2055, -63.5354, 4.19379, -7.2055, -63.5354, 0.793785, -5.4055, -63.8354, 0.793785, -6.9055, -64.4354, 0.793785, -5.4055, -64.7354, 0.793785, -3.0055, -57.8354, 0.793785, -3.0055, -57.8354, 0.793785, -5.4055, -63.5354, 0.793785, -5.4055, -64.7354, 0.793785, -3.0055, -78.5354, 0.793785, 14.6945, -78.5354, 0.793785, 20.9945, -71.6354, 0.793785, 20.9945, -71.6354, 0.793785, 8.9945, -78.5354, 0.793785, 8.6945, -78.5354, 0.793785, 14.6945, -71.6354, 0.793785, 8.9945, -64.7354, 0.793785, -3.0055, -64.4354, 0.793785, -5.4055, -70.4354, 0.793785, -5.4055, -71.3354, 0.793785, -2.7055, -71.3354, 0.793785, -2.7055, -77.0354, 0.793785, -3.9055, -78.5354, 0.793785, 2.3945, -78.5354, 0.793785, 8.6945, -71.6354, 0.793785, 8.9945, -71.3354, 0.793785, -2.7055, -70.4354, 0.793785, -5.4055, -70.7354, 0.793785, -6.9055, -77.0354, 0.793785, -6.9055, -77.0354, 0.793785, -3.9055, -77.0354, 0.793785, -3.9055, -78.5354, 0.793785, -3.6055, -78.5354, 0.793785, 2.3945, -78.8354, 4.19379, 10.1945, -78.8354, 4.19379, 21.8945, -71.3354, 4.19379, 21.8945, -71.0354, 4.19379, 10.1945, -71.0354, 4.19379, -1.8055, -78.8354, 4.19379, -1.8055, -78.8354, 4.19379, 10.1945, -71.0354, 4.19379, 10.1945, -2.93545, 5.19379, 2.9945, -8.33544, 5.19379, 2.9945, -8.33544, 5.19379, 11.0945, -2.93545, 5.19379, 11.0945, -2.93545, 0.993785, 12.5945, -3.23544, 0.993785, 10.1945, -7.73544, 0.993785, 10.1945, -8.03545, 0.993785, 12.5945, -5.63544, 0.993785, 32.9945, 0.364555, 0.993785, 32.9945, 6.66456, 0.993785, 22.7945, -2.93545, 0.993785, 12.5945, -8.03545, 0.993785, 12.5945, -17.6354, 0.993785, 22.7945, 0.364555, 0.993785, 32.9945, 6.66456, 0.993785, 32.9945, 6.66456, 0.993785, 22.7945, -8.03545, 0.993785, 12.5945, -17.6354, 0.993785, 12.5945, -17.6354, 0.993785, 22.7945, 6.66456, 0.993785, 22.7945, 6.66456, 0.993785, 12.5945, -2.93545, 0.993785, 12.5945, -17.6354, 0.993785, 22.7945, -17.6354, 0.993785, 32.9945, -5.63544, 0.993785, 32.9945, -18.2354, 7.79379, 23.6945, -17.9354, 7.79379, 33.2945, -11.9354, 7.79379, 33.2945, 0.664558, 7.79379, 33.2945, 6.96455, 7.79379, 33.2945, 6.96455, 7.79379, 22.7945, 6.96455, 7.79379, 22.7945, 6.96455, 7.79379, 12.2945, 0.664558, 7.79379, 12.2945, -11.9354, 7.79379, 12.2945, -17.9354, 7.79379, 12.2945, -18.2354, 7.79379, 23.6945, -18.2354, 7.79379, 23.6945, -11.9354, 7.79379, 33.2945, -5.63544, 7.79379, 33.2945, -5.63544, 7.79379, 33.2945, 0.664558, 7.79379, 33.2945, 6.96455, 7.79379, 22.7945, -5.63544, 7.79379, 12.2945, -11.9354, 7.79379, 12.2945, -18.2354, 7.79379, 23.6945, 6.96455, 7.79379, 22.7945, 0.664558, 7.79379, 12.2945, -5.63544, 7.79379, 12.2945, -71.3354, 0.593785, 23.3945, -71.6354, 0.793785, 20.9945, -78.5354, 0.793785, 20.9945, -78.8354, 0.593785, 23.3945, -84.5354, 0.593785, 38.3945, -84.5354, 0.593785, 45.5945, -75.2354, 0.593785, 53.0945, -65.6354, 0.593785, 38.3945, -65.6354, 0.593785, 30.8945, -78.8354, 0.593785, 23.3945, -78.8354, 0.593785, 23.3945, -84.5354, 0.593785, 23.6945, -84.5354, 0.593785, 30.8945, -65.6354, 0.593785, 30.8945, -65.6354, 0.593785, 23.6945, -71.3354, 0.593785, 23.3945, -78.8354, 0.593785, 23.3945, -84.5354, 0.593785, 45.5945, -84.5354, 0.593785, 53.0945, -75.2354, 0.593785, 53.0945, -75.2354, 0.593785, 53.0945, -65.6354, 0.593785, 53.0945, -65.6354, 0.593785, 45.5945, -75.2354, 0.593785, 53.0945, -65.6354, 0.593785, 45.5945, -65.6354, 0.593785, 38.3945, -78.8354, 0.593785, 23.3945, -84.5354, 0.593785, 30.8945, -84.5354, 0.593785, 38.3945, -75.5354, 5.79379, 23.0945, -84.8354, 5.79379, 23.3945, -84.8354, 5.79379, 30.5945, -84.8354, 5.79379, 45.5945, -84.8354, 5.79379, 53.0945, -75.2354, 5.79379, 53.0945, -75.2354, 5.79379, 53.0945, -65.3354, 5.79379, 53.0945, -65.3354, 5.79379, 45.5945, -65.3354, 5.79379, 30.5945, -65.3354, 5.79379, 23.3945, -75.5354, 5.79379, 23.0945, -75.5354, 5.79379, 23.0945, -84.8354, 5.79379, 30.5945, -84.8354, 5.79379, 38.0945, -84.8354, 5.79379, 38.0945, -84.8354, 5.79379, 45.5945, -75.2354, 5.79379, 53.0945, -65.3354, 5.79379, 38.0945, -65.3354, 5.79379, 30.5945, -75.5354, 5.79379, 23.0945, -75.2354, 5.79379, 53.0945, -65.3354, 5.79379, 45.5945, -65.3354, 5.79379, 38.0945 )
+polygons = [ PoolIntArray( 0, 2, 1 ), PoolIntArray( 5, 4, 3 ), PoolIntArray( 8, 7, 6 ), PoolIntArray( 11, 10, 9 ), PoolIntArray( 14, 13, 12 ), PoolIntArray( 17, 16, 15 ), PoolIntArray( 19, 18, 20 ), PoolIntArray( 20, 18, 21 ), PoolIntArray( 21, 18, 22 ), PoolIntArray( 22, 18, 23 ), PoolIntArray( 26, 25, 24 ), PoolIntArray( 29, 28, 27 ), PoolIntArray( 31, 30, 32 ), PoolIntArray( 34, 33, 35 ), PoolIntArray( 35, 33, 36 ), PoolIntArray( 39, 38, 37 ), PoolIntArray( 42, 41, 40 ), PoolIntArray( 44, 43, 45 ), PoolIntArray( 45, 43, 46 ), PoolIntArray( 48, 47, 49 ), PoolIntArray( 49, 47, 50 ), PoolIntArray( 50, 47, 51 ), PoolIntArray( 51, 47, 52 ), PoolIntArray( 55, 54, 53 ), PoolIntArray( 58, 57, 56 ), PoolIntArray( 59, 61, 60 ), PoolIntArray( 64, 63, 62 ), PoolIntArray( 66, 65, 67 ), PoolIntArray( 67, 65, 68 ), PoolIntArray( 69, 71, 70 ), PoolIntArray( 73, 72, 74 ), PoolIntArray( 74, 72, 75 ), PoolIntArray( 75, 72, 76 ), PoolIntArray( 78, 77, 79 ), PoolIntArray( 79, 77, 80 ), PoolIntArray( 82, 81, 83 ), PoolIntArray( 83, 81, 84 ), PoolIntArray( 88, 87, 85 ), PoolIntArray( 85, 87, 86 ), PoolIntArray( 90, 89, 91 ), PoolIntArray( 91, 89, 92 ), PoolIntArray( 94, 93, 95 ), PoolIntArray( 95, 93, 96 ), PoolIntArray( 100, 99, 97 ), PoolIntArray( 97, 99, 98 ), PoolIntArray( 102, 101, 103 ), PoolIntArray( 103, 101, 104 ), PoolIntArray( 104, 101, 106 ), PoolIntArray( 104, 106, 105 ), PoolIntArray( 108, 107, 109 ), PoolIntArray( 109, 107, 110 ), PoolIntArray( 110, 107, 111 ), PoolIntArray( 113, 112, 114 ), PoolIntArray( 114, 112, 116 ), PoolIntArray( 114, 116, 115 ), PoolIntArray( 118, 117, 119 ), PoolIntArray( 119, 117, 120 ), PoolIntArray( 122, 121, 123 ), PoolIntArray( 123, 121, 124 ), PoolIntArray( 124, 121, 125 ), PoolIntArray( 128, 127, 126 ), PoolIntArray( 131, 130, 129 ), PoolIntArray( 134, 133, 135 ), PoolIntArray( 135, 133, 136 ), PoolIntArray( 136, 133, 132 ), PoolIntArray( 136, 132, 137 ), PoolIntArray( 141, 140, 138 ), PoolIntArray( 138, 140, 139 ), PoolIntArray( 146, 145, 142 ), PoolIntArray( 142, 145, 144 ), PoolIntArray( 142, 144, 143 ), PoolIntArray( 151, 150, 147 ), PoolIntArray( 147, 150, 149 ), PoolIntArray( 147, 149, 148 ), PoolIntArray( 153, 152, 154 ), PoolIntArray( 154, 152, 155 ), PoolIntArray( 155, 152, 156 ), PoolIntArray( 156, 152, 157 ), PoolIntArray( 160, 159, 158 ), PoolIntArray( 164, 163, 161 ), PoolIntArray( 161, 163, 162 ), PoolIntArray( 166, 165, 167 ), PoolIntArray( 167, 165, 168 ), PoolIntArray( 170, 169, 171 ), PoolIntArray( 171, 169, 172 ), PoolIntArray( 174, 173, 175 ), PoolIntArray( 175, 173, 176 ), PoolIntArray( 178, 177, 179 ), PoolIntArray( 179, 177, 180 ), PoolIntArray( 183, 182, 181 ), PoolIntArray( 185, 184, 186 ), PoolIntArray( 186, 184, 187 ), PoolIntArray( 189, 188, 190 ), PoolIntArray( 190, 188, 191 ), PoolIntArray( 191, 188, 192 ), PoolIntArray( 194, 193, 195 ), PoolIntArray( 195, 193, 197 ), PoolIntArray( 195, 197, 196 ), PoolIntArray( 200, 199, 198 ), PoolIntArray( 202, 201, 203 ), PoolIntArray( 203, 201, 204 ), PoolIntArray( 208, 207, 205 ), PoolIntArray( 205, 207, 206 ), PoolIntArray( 212, 211, 209 ), PoolIntArray( 209, 211, 210 ), PoolIntArray( 214, 213, 215 ), PoolIntArray( 215, 213, 216 ), PoolIntArray( 218, 217, 219 ), PoolIntArray( 219, 217, 220 ), PoolIntArray( 220, 217, 221 ), PoolIntArray( 221, 217, 222 ), PoolIntArray( 225, 224, 223 ), PoolIntArray( 228, 227, 226 ), PoolIntArray( 231, 230, 229 ), PoolIntArray( 234, 233, 232 ), PoolIntArray( 237, 236, 235 ), PoolIntArray( 240, 239, 238 ), PoolIntArray( 243, 242, 241 ), PoolIntArray( 246, 245, 244 ), PoolIntArray( 249, 248, 247 ), PoolIntArray( 251, 250, 252 ), PoolIntArray( 252, 250, 253 ), PoolIntArray( 253, 250, 254 ), PoolIntArray( 254, 250, 255 ), PoolIntArray( 258, 257, 256 ), PoolIntArray( 260, 259, 261 ), PoolIntArray( 261, 259, 262 ), PoolIntArray( 264, 263, 265 ), PoolIntArray( 265, 263, 266 ), PoolIntArray( 266, 263, 267 ), PoolIntArray( 267, 263, 268 ), PoolIntArray( 271, 270, 269 ), PoolIntArray( 273, 272, 274 ), PoolIntArray( 274, 272, 275 ), PoolIntArray( 278, 277, 276 ), PoolIntArray( 279, 281, 280 ), PoolIntArray( 284, 283, 282 ), PoolIntArray( 287, 286, 285 ), PoolIntArray( 290, 289, 288 ), PoolIntArray( 293, 292, 291 ), PoolIntArray( 296, 295, 294 ), PoolIntArray( 299, 298, 297 ), PoolIntArray( 302, 301, 300 ), PoolIntArray( 304, 303, 305 ), PoolIntArray( 305, 303, 306 ), PoolIntArray( 306, 303, 307 ), PoolIntArray( 307, 303, 308 ), PoolIntArray( 311, 310, 309 ) ]
+agent/height = 0.28
+agent/radius = 0.51
+
+[sub_resource type="SpatialMaterial" id=3]
+albedo_texture = ExtResource( 3 )
+
+[sub_resource type="ConcavePolygonShape" id=4]
+data = PoolVector3Array( -0.7825, 3.3165, 0.7125, -0.7825, -0.0158, 0.7125, -0.7825, 3.7569, -0.8525, -0.7825, 3.7569, -0.8525, -0.7825, -0.0158, 0.7125, -0.7825, -0.0158, -0.8525, -0.7825, 3.7569, -0.8525, -0.7825, -0.0158, -0.8525, 0.7825, 3.7569, -0.8525, 0.7825, 3.7569, -0.8525, -0.7825, -0.0158, -0.8525, 0.7825, -0.0158, -0.8525, 0.7825, 3.7569, -0.8525, 0.7825, -0.0158, -0.8525, 0.7825, 3.3165, 0.7125, 0.7825, 3.3165, 0.7125, 0.7825, -0.0158, -0.8525, 0.7825, -0.0158, 0.7125, 0.7825, 3.3165, 0.7125, 0.7825, -0.0158, 0.7125, -0.7825, 3.3165, 0.7125, -0.7825, 3.3165, 0.7125, 0.7825, -0.0158, 0.7125, -0.7825, -0.0158, 0.7125, 0.7825, -0.0158, -0.8525, -0.7825, -0.0158, -0.8525, 0.7825, -0.0158, 0.7125, 0.7825, -0.0158, 0.7125, -0.7825, -0.0158, -0.8525, -0.7825, -0.0158, 0.7125, -0.7825, 3.7569, -0.8525, 0.7825, 3.7569, -0.8525, -0.7825, 3.3165, 0.7125, -0.7825, 3.3165, 0.7125, 0.7825, 3.7569, -0.8525, 0.7825, 3.3165, 0.7125 )
+
+[sub_resource type="PlaneMesh" id=5]
+
+[sub_resource type="SpatialMaterial" id=6]
+albedo_texture = ExtResource( 5 )
+
+[node name="Spatial" type="Spatial"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource( 1 )
+
+[node name="player" parent="." instance=ExtResource( 2 )]
+transform = Transform( -0.264715, 0, 0.964327, 0, 1, 0, -0.964327, 0, -0.264715, -2.41215, 1.07034, -3.83588 )
+
+[node name="SpotLight" type="SpotLight" parent="player"]
+spot_range = 11.6913
+
+[node name="Navigation" type="Navigation" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.891857, 0 )
+
+[node name="NavigationMeshInstance" type="NavigationMeshInstance" parent="Navigation"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0489426, -4.76837e-07, -0.0200233 )
+navmesh = SubResource( 2 )
+
+[node name="school" parent="Navigation/NavigationMeshInstance" instance=ExtResource( 1 )]
+transform = Transform( 1.81355, 0, 0, 0, 1, 0, 0, 0, 1.89996, -4.54073, 0.661442, -4.02755 )
+
+[node name="OmniLight3" type="OmniLight" parent="Navigation/NavigationMeshInstance/school"]
+transform = Transform( -0.551406, 0, 0, 0, -0.999425, 0.0339054, 0, -0.0178453, -0.526025, -5.50576, 3.88701, -0.000652075 )
+omni_range = 7.07566
+
+[node name="OmniLight6" type="OmniLight" parent="Navigation/NavigationMeshInstance/school"]
+transform = Transform( -0.551405, 0, 0, 0, -0.999425, 0.0339054, 0, -0.0178453, -0.526024, -13.8264, 3.88701, -0.000652075 )
+omni_range = 7.07566
+
+[node name="OmniLight7" type="OmniLight" parent="Navigation/NavigationMeshInstance/school"]
+transform = Transform( -0.549698, -0.0433241, 0.00146977, 0.0786157, -0.996332, 0.0338004, 0, -0.0178453, -0.526024, -32.1461, 2.83946, -0.000652075 )
+light_energy = 0.7
+omni_range = 7.07566
+
+[node name="OmniLight8" type="OmniLight" parent="Navigation/NavigationMeshInstance/school"]
+transform = Transform( -0.549698, -0.0433241, 0.00146976, 0.0786156, -0.996332, 0.0338004, 0, -0.0178453, -0.526024, -39.1133, 2.83946, 1.40523 )
+light_energy = 0.7
+omni_range = 7.07566
+
+[node name="OmniLight9" type="OmniLight" parent="Navigation/NavigationMeshInstance/school"]
+transform = Transform( -0.549698, -0.0433241, 0.00146976, 0.0786156, -0.996332, 0.0338004, 0, -0.0178453, -0.526024, -39.1133, 2.83945, 7.66735 )
+light_energy = 0.7
+omni_range = 7.07566
+
+[node name="OmniLight10" type="OmniLight" parent="Navigation/NavigationMeshInstance/school"]
+transform = Transform( -0.549698, -0.0433241, 0.00146976, 0.0786156, -0.996332, 0.0338004, 0, -0.0178453, -0.526024, -39.1133, 2.83945, 13.0771 )
+light_energy = 0.68
+omni_range = 7.07566
+
+[node name="OmniLight4" type="OmniLight" parent="Navigation/NavigationMeshInstance/school"]
+transform = Transform( -0.551406, 0, 0, 0, -0.999425, 0.0339054, 0, -0.0178453, -0.526025, 8.65711, 3.88701, -0.000652075 )
+omni_range = 7.07566
+
+[node name="OmniLight5" type="OmniLight" parent="Navigation/NavigationMeshInstance/school"]
+transform = Transform( -0.551406, 0, 0, 0, -0.999425, 0.0339054, 0, -0.0178453, -0.526025, 1.37526, 3.88701, -0.000652075 )
+omni_range = 7.07566
+
+[node name="Locker" type="MeshInstance" parent="Navigation/NavigationMeshInstance/school"]
+transform = Transform( -0.551279, 0, -0.0118075, 0, 1, 0, 0.0112705, 0, -0.526207, 2.59056, -0.0535784, 2.14498 )
+mesh = ExtResource( 4 )
+material/0 = SubResource( 3 )
+
+[node name="StaticBody" type="StaticBody" parent="Navigation/NavigationMeshInstance/school/Locker"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Navigation/NavigationMeshInstance/school/Locker/StaticBody"]
+shape = SubResource( 4 )
+
+[node name="Locker2" type="MeshInstance" parent="Navigation/NavigationMeshInstance/school/Locker"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.77669, 0, -0.038054 )
+mesh = ExtResource( 4 )
+material/0 = SubResource( 3 )
+
+[node name="StaticBody" type="StaticBody" parent="Navigation/NavigationMeshInstance/school/Locker/Locker2"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Navigation/NavigationMeshInstance/school/Locker/Locker2/StaticBody"]
+shape = SubResource( 4 )
+
+[node name="Locker3" type="MeshInstance" parent="Navigation/NavigationMeshInstance/school/Locker"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.56987, 0.0168719, -0.0921834 )
+mesh = ExtResource( 4 )
+material/0 = SubResource( 3 )
+
+[node name="StaticBody" type="StaticBody" parent="Navigation/NavigationMeshInstance/school/Locker/Locker3"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Navigation/NavigationMeshInstance/school/Locker/Locker3/StaticBody"]
+shape = SubResource( 4 )
+
+[node name="Locker4" type="MeshInstance" parent="Navigation/NavigationMeshInstance/school/Locker"]
+transform = Transform( -0.999982, 0, 0.00600397, 0, 1, 0, -0.00600397, 0, -0.999982, -12.7711, 0, 7.9794 )
+mesh = ExtResource( 4 )
+material/0 = SubResource( 3 )
+
+[node name="StaticBody" type="StaticBody" parent="Navigation/NavigationMeshInstance/school/Locker/Locker4"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Navigation/NavigationMeshInstance/school/Locker/Locker4/StaticBody"]
+shape = SubResource( 4 )
+
+[node name="Locker5" type="MeshInstance" parent="Navigation/NavigationMeshInstance/school/Locker"]
+transform = Transform( -0.999982, 0, 0.00600397, 0, 1, 0, -0.00600397, 0, -0.999982, -10.9947, 0, 8.02812 )
+mesh = ExtResource( 4 )
+material/0 = SubResource( 3 )
+
+[node name="StaticBody" type="StaticBody" parent="Navigation/NavigationMeshInstance/school/Locker/Locker5"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Navigation/NavigationMeshInstance/school/Locker/Locker5/StaticBody"]
+shape = SubResource( 4 )
+
+[node name="Locker6" type="MeshInstance" parent="Navigation/NavigationMeshInstance/school/Locker"]
+transform = Transform( -0.999982, 0, 0.00600397, 0, 1, 0, -0.00600397, 0, -0.999982, -9.2019, 0.0168719, 8.09302 )
+mesh = ExtResource( 4 )
+material/0 = SubResource( 3 )
+
+[node name="StaticBody" type="StaticBody" parent="Navigation/NavigationMeshInstance/school/Locker/Locker6"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Navigation/NavigationMeshInstance/school/Locker/Locker6/StaticBody"]
+shape = SubResource( 4 )
+
+[node name="Locker8" type="MeshInstance" parent="Navigation/NavigationMeshInstance/school/Locker"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 27.7097, 0, 0.593497 )
+mesh = ExtResource( 4 )
+material/0 = SubResource( 3 )
+
+[node name="StaticBody" type="StaticBody" parent="Navigation/NavigationMeshInstance/school/Locker/Locker8"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Navigation/NavigationMeshInstance/school/Locker/Locker8/StaticBody"]
+shape = SubResource( 4 )
+
+[node name="Locker9" type="MeshInstance" parent="Navigation/NavigationMeshInstance/school/Locker"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 30.5291, 0.0168719, 0.638163 )
+mesh = ExtResource( 4 )
+material/0 = SubResource( 3 )
+
+[node name="StaticBody" type="StaticBody" parent="Navigation/NavigationMeshInstance/school/Locker/Locker9"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Navigation/NavigationMeshInstance/school/Locker/Locker9/StaticBody"]
+shape = SubResource( 4 )
+
+[node name="Locker10" type="MeshInstance" parent="Navigation/NavigationMeshInstance/school/Locker"]
+transform = Transform( -0.999982, 0, 0.00600397, 0, 1, 0, -0.00600397, 0, -0.999982, 21.3278, 0, 8.70975 )
+mesh = ExtResource( 4 )
+material/0 = SubResource( 3 )
+
+[node name="StaticBody" type="StaticBody" parent="Navigation/NavigationMeshInstance/school/Locker/Locker10"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Navigation/NavigationMeshInstance/school/Locker/Locker10/StaticBody"]
+shape = SubResource( 4 )
+
+[node name="Locker11" type="MeshInstance" parent="Navigation/NavigationMeshInstance/school/Locker"]
+transform = Transform( -0.999982, 0, 0.00600397, 0, 1, 0, -0.00600397, 0, -0.999982, 23.1043, 0, 8.75847 )
+mesh = ExtResource( 4 )
+material/0 = SubResource( 3 )
+
+[node name="StaticBody" type="StaticBody" parent="Navigation/NavigationMeshInstance/school/Locker/Locker11"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Navigation/NavigationMeshInstance/school/Locker/Locker11/StaticBody"]
+shape = SubResource( 4 )
+
+[node name="Locker12" type="MeshInstance" parent="Navigation/NavigationMeshInstance/school/Locker"]
+transform = Transform( -0.999982, 0, 0.00600397, 0, 1, 0, -0.00600397, 0, -0.999982, 24.8971, 0.0168719, 8.82336 )
+mesh = ExtResource( 4 )
+material/0 = SubResource( 3 )
+
+[node name="StaticBody" type="StaticBody" parent="Navigation/NavigationMeshInstance/school/Locker/Locker12"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Navigation/NavigationMeshInstance/school/Locker/Locker12/StaticBody"]
+shape = SubResource( 4 )
+
+[node name="Locker13" type="MeshInstance" parent="Navigation/NavigationMeshInstance/school/Locker"]
+transform = Transform( -0.999981, 0, 0.00600397, 0, 1, 0, -0.00600397, 0, -0.999981, 65.768, -0.598304, 8.41726 )
+mesh = ExtResource( 4 )
+material/0 = SubResource( 3 )
+
+[node name="StaticBody" type="StaticBody" parent="Navigation/NavigationMeshInstance/school/Locker/Locker13"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Navigation/NavigationMeshInstance/school/Locker/Locker13/StaticBody"]
+shape = SubResource( 4 )
+
+[node name="Locker14" type="MeshInstance" parent="Navigation/NavigationMeshInstance/school/Locker"]
+transform = Transform( -0.999981, 0, 0.00600397, 0, 1, 0, -0.00600397, 0, -0.999981, 67.5445, -0.598304, 8.46598 )
+mesh = ExtResource( 4 )
+material/0 = SubResource( 3 )
+
+[node name="StaticBody" type="StaticBody" parent="Navigation/NavigationMeshInstance/school/Locker/Locker14"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Navigation/NavigationMeshInstance/school/Locker/Locker14/StaticBody"]
+shape = SubResource( 4 )
+
+[node name="Locker15" type="MeshInstance" parent="Navigation/NavigationMeshInstance/school/Locker"]
+transform = Transform( -0.999981, 0, 0.00600397, 0, 1, 0, -0.00600396, 0, -0.999981, 69.3373, -0.581432, 8.53087 )
+mesh = ExtResource( 4 )
+material/0 = SubResource( 3 )
+
+[node name="StaticBody" type="StaticBody" parent="Navigation/NavigationMeshInstance/school/Locker/Locker15"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Navigation/NavigationMeshInstance/school/Locker/Locker15/StaticBody"]
+shape = SubResource( 4 )
+
+[node name="Locker16" type="MeshInstance" parent="Navigation/NavigationMeshInstance/school/Locker"]
+transform = Transform( -0.999981, 0, 0.00600397, 0, 1, 0, -0.00600396, 0, -0.999981, 58.8476, -0.598304, 8.26904 )
+mesh = ExtResource( 4 )
+material/0 = SubResource( 3 )
+
+[node name="StaticBody" type="StaticBody" parent="Navigation/NavigationMeshInstance/school/Locker/Locker16"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Navigation/NavigationMeshInstance/school/Locker/Locker16/StaticBody"]
+shape = SubResource( 4 )
+
+[node name="Locker17" type="MeshInstance" parent="Navigation/NavigationMeshInstance/school/Locker"]
+transform = Transform( -0.999981, 0, 0.00600397, 0, 1, 0, -0.00600396, 0, -0.999981, 60.6241, -0.598304, 8.31776 )
+mesh = ExtResource( 4 )
+material/0 = SubResource( 3 )
+
+[node name="StaticBody" type="StaticBody" parent="Navigation/NavigationMeshInstance/school/Locker/Locker17"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Navigation/NavigationMeshInstance/school/Locker/Locker17/StaticBody"]
+shape = SubResource( 4 )
+
+[node name="Locker18" type="MeshInstance" parent="Navigation/NavigationMeshInstance/school/Locker"]
+transform = Transform( -0.999981, 0, 0.00600397, 0, 1, 0, -0.00600396, 0, -0.999981, 62.4169, -0.581432, 8.38264 )
+mesh = ExtResource( 4 )
+material/0 = SubResource( 3 )
+
+[node name="StaticBody" type="StaticBody" parent="Navigation/NavigationMeshInstance/school/Locker/Locker18"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Navigation/NavigationMeshInstance/school/Locker/Locker18/StaticBody"]
+shape = SubResource( 4 )
+
+[node name="Locker22" type="MeshInstance" parent="Navigation/NavigationMeshInstance/school/Locker"]
+transform = Transform( 0.0355274, 0, -0.999367, 0, 1, 0, 0.999367, 0, 0.0355273, 78.2091, -0.598304, 2.25892 )
+mesh = ExtResource( 4 )
+material/0 = SubResource( 3 )
+
+[node name="StaticBody" type="StaticBody" parent="Navigation/NavigationMeshInstance/school/Locker/Locker22"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Navigation/NavigationMeshInstance/school/Locker/Locker22/StaticBody"]
+shape = SubResource( 4 )
+
+[node name="Locker23" type="MeshInstance" parent="Navigation/NavigationMeshInstance/school/Locker"]
+transform = Transform( 0.0355274, 0, -0.999367, 0, 1, 0, 0.999367, 0, 0.0355273, 78.184, -0.598304, 0.481875 )
+mesh = ExtResource( 4 )
+material/0 = SubResource( 3 )
+
+[node name="StaticBody" type="StaticBody" parent="Navigation/NavigationMeshInstance/school/Locker/Locker23"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Navigation/NavigationMeshInstance/school/Locker/Locker23/StaticBody"]
+shape = SubResource( 4 )
+
+[node name="Locker24" type="MeshInstance" parent="Navigation/NavigationMeshInstance/school/Locker"]
+transform = Transform( 0.0355274, 0, -0.999367, 0, 1, 0, 0.999367, 0, 0.0355273, 78.1743, -0.581432, -1.31203 )
+mesh = ExtResource( 4 )
+material/0 = SubResource( 3 )
+
+[node name="StaticBody" type="StaticBody" parent="Navigation/NavigationMeshInstance/school/Locker/Locker24"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Navigation/NavigationMeshInstance/school/Locker/Locker24/StaticBody"]
+shape = SubResource( 4 )
+
+[node name="Locker25" type="MeshInstance" parent="Navigation/NavigationMeshInstance/school/Locker"]
+transform = Transform( 0.0355274, 0, -0.999367, 0, 1, 0, 0.999367, 0, 0.0355273, 78.3237, -0.607029, -3.07205 )
+mesh = ExtResource( 4 )
+material/0 = SubResource( 3 )
+
+[node name="StaticBody" type="StaticBody" parent="Navigation/NavigationMeshInstance/school/Locker/Locker25"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Navigation/NavigationMeshInstance/school/Locker/Locker25/StaticBody"]
+shape = SubResource( 4 )
+
+[node name="Locker31" type="MeshInstance" parent="Navigation/NavigationMeshInstance/school/Locker"]
+transform = Transform( 0.0355274, 0, -0.999367, 0, 1, 0, 0.999367, 0, 0.0355274, 78.5804, -0.598304, -15.0734 )
+mesh = ExtResource( 4 )
+material/0 = SubResource( 3 )
+
+[node name="StaticBody" type="StaticBody" parent="Navigation/NavigationMeshInstance/school/Locker/Locker31"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Navigation/NavigationMeshInstance/school/Locker/Locker31/StaticBody"]
+shape = SubResource( 4 )
+
+[node name="Locker32" type="MeshInstance" parent="Navigation/NavigationMeshInstance/school/Locker"]
+transform = Transform( 0.0355274, 0, -0.999367, 0, 1, 0, 0.999367, 0, 0.0355274, 78.5552, -0.598304, -16.8504 )
+mesh = ExtResource( 4 )
+material/0 = SubResource( 3 )
+
+[node name="StaticBody" type="StaticBody" parent="Navigation/NavigationMeshInstance/school/Locker/Locker32"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Navigation/NavigationMeshInstance/school/Locker/Locker32/StaticBody"]
+shape = SubResource( 4 )
+
+[node name="Locker33" type="MeshInstance" parent="Navigation/NavigationMeshInstance/school/Locker"]
+transform = Transform( 0.0355274, 0, -0.999367, 0, 1, 0, 0.999367, 0, 0.0355273, 78.5456, -0.581432, -18.6443 )
+mesh = ExtResource( 4 )
+material/0 = SubResource( 3 )
+
+[node name="StaticBody" type="StaticBody" parent="Navigation/NavigationMeshInstance/school/Locker/Locker33"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Navigation/NavigationMeshInstance/school/Locker/Locker33/StaticBody"]
+shape = SubResource( 4 )
+
+[node name="Locker19" type="MeshInstance" parent="Navigation/NavigationMeshInstance/school/Locker"]
+transform = Transform( 0.0986769, 0, -0.995118, 0, 1, 0, 0.995118, 0, 0.0986769, 78.8201, -0.598304, 10.4934 )
+mesh = ExtResource( 4 )
+material/0 = SubResource( 3 )
+
+[node name="StaticBody" type="StaticBody" parent="Navigation/NavigationMeshInstance/school/Locker/Locker19"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Navigation/NavigationMeshInstance/school/Locker/Locker19/StaticBody"]
+shape = SubResource( 4 )
+
+[node name="Locker20" type="MeshInstance" parent="Navigation/NavigationMeshInstance/school/Locker"]
+transform = Transform( 0.0986769, 0, -0.995118, 0, 1, 0, 0.995118, 0, 0.0986769, 78.6826, -0.598304, 8.7215 )
+mesh = ExtResource( 4 )
+material/0 = SubResource( 3 )
+
+[node name="StaticBody" type="StaticBody" parent="Navigation/NavigationMeshInstance/school/Locker/Locker20"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Navigation/NavigationMeshInstance/school/Locker/Locker20/StaticBody"]
+shape = SubResource( 4 )
+
+[node name="Locker21" type="MeshInstance" parent="Navigation/NavigationMeshInstance/school/Locker"]
+transform = Transform( 0.098677, 0, -0.995118, 0, 1, 0, 0.995118, 0, 0.0986769, 78.5596, -0.581432, 6.93181 )
+mesh = ExtResource( 4 )
+material/0 = SubResource( 3 )
+
+[node name="StaticBody" type="StaticBody" parent="Navigation/NavigationMeshInstance/school/Locker/Locker21"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Navigation/NavigationMeshInstance/school/Locker/Locker21/StaticBody"]
+shape = SubResource( 4 )
+
+[node name="door" type="MeshInstance" parent="Navigation/NavigationMeshInstance/school"]
+transform = Transform( -0.551228, -0.010349, 0.00941202, -0.0294463, -0.0524286, -1.78221, 0.0101368, -0.526007, 0.0153064, -4.14433, 1.62588, 2.48692 )
+mesh = SubResource( 5 )
+material/0 = SubResource( 6 )
+
+[node name="door2" type="MeshInstance" parent="Navigation/NavigationMeshInstance/school"]
+transform = Transform( 0.549362, 0.0462631, -0.0104377, -0.0294463, -0.0524286, -1.78221, -0.0444269, 0.524243, -0.014688, -13.3745, 1.62588, -2.49292 )
+mesh = SubResource( 5 )
+material/0 = SubResource( 6 )
+
+[node name="door3" type="MeshInstance" parent="Navigation/NavigationMeshInstance/school"]
+transform = Transform( 0.549362, 0.0462631, -0.0104377, -0.0294463, -0.0524286, -1.78221, -0.0444269, 0.524243, -0.014688, 12.6748, 1.62588, -2.49292 )
+mesh = SubResource( 5 )
+material/0 = SubResource( 6 )
+
+[node name="eyes" parent="." instance=ExtResource( 6 )]
+transform = Transform( 1.25, 0, 0, 0, 1.25, 0, 0, 0, 1.25, 41.253, -1.16509, -4.60683 )

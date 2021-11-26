@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Cat_Meowing-SoundBible.com-781322082.mp3-5dd5df5da71cffd7ff58b841a3487136.mp3str"
+
+[deps]
+
+source_file="res://audio/Cat_Meowing-SoundBible.com-781322082.mp3"
+dest_files=[ "res://.import/Cat_Meowing-SoundBible.com-781322082.mp3-5dd5df5da71cffd7ff58b841a3487136.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

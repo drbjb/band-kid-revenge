@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/bandkid's house.obj-6196db1847b810e40c9c6ec2d92f6624.mesh"
+
+[deps]
+
+files=[ "res://.import/bandkid's house.obj-6196db1847b810e40c9c6ec2d92f6624.mesh" ]
+
+source_file="res://models/bandkid's house.obj"
+dest_files=[ "res://.import/bandkid's house.obj-6196db1847b810e40c9c6ec2d92f6624.mesh", "res://.import/bandkid's house.obj-6196db1847b810e40c9c6ec2d92f6624.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true
