@@ -14,10 +14,6 @@ func show_dialog(id: String) -> void:
 		add_child(balloon)
 		show_dialog(yield(balloon, "dialog_actioned"))
 
-# load anotehr scene
-func load_scene(scene_name):
-	print("Not done, but this would show a scene: ", scene_name)
-
 func _ready():
 	# load the saywhat dialog file
 	DialogueManager.resource = preload("res://dialog/dialog.tres")

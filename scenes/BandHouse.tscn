@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://models/bandkid's house.obj" type="ArrayMesh" id=1]
 [ext_resource path="res://materials/bandkidhousetilemap.png" type="Texture" id=2]
@@ -10,7 +10,6 @@
 [ext_resource path="res://nodes/portal.tscn" type="PackedScene" id=8]
 [ext_resource path="res://nodes/trigger_area.tscn" type="PackedScene" id=9]
 [ext_resource path="res://materials/door.jpeg" type="Texture" id=10]
-[ext_resource path="res://nodes/Dialog.tscn" type="PackedScene" id=11]
 
 [sub_resource type="SpatialMaterial" id=1]
 albedo_texture = ExtResource( 2 )
@@ -75,9 +74,6 @@ transform = Transform( 0.393157, 0, 0.249886, 0, 0.359112, 0, -0.214686, 0, 0.45
 mesh = ExtResource( 6 )
 material/0 = SubResource( 7 )
 material/1 = SubResource( 8 )
-
-[node name="Dialog" parent="." instance=ExtResource( 11 )]
-visible = false
 
 [node name="trigger_area" parent="." instance=ExtResource( 9 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0241804, 0.293183, 5.09465 )
