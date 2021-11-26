@@ -1,0 +1,49 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://addons/saywhat_godot/dialogue_resource.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+lines = {
+"1a31c351-68ce-491d-86d3-1fbc43a06ba1": {
+"id": "1a31c351-68ce-491d-86d3-1fbc43a06ba1",
+"responses": [ {
+"next_node_id": "e18fc3c4-38cb-4dcf-90a3-447d93bb3671",
+"prompt": "Can you repeat that?"
+}, {
+"next_node_id": "",
+"prompt": "That's all for now"
+} ],
+"type": "responses"
+},
+"2f9e140c-a35d-4c45-9ec2-0db231d1f0cb": {
+"go_to_node_id": "",
+"id": "2f9e140c-a35d-4c45-9ec2-0db231d1f0cb",
+"next_node_id": "54731a80-7f69-423c-9ecf-64f89593aa18",
+"type": "dialogue"
+},
+"54731a80-7f69-423c-9ecf-64f89593aa18": {
+"go_to_node_id": "",
+"id": "54731a80-7f69-423c-9ecf-64f89593aa18",
+"mutation": "has_met_ur_bestie = true",
+"next_node_id": "1a31c351-68ce-491d-86d3-1fbc43a06ba1",
+"type": "mutation"
+},
+"914cf080-f9d2-4328-81c0-7d582027c1f4": {
+"character": "Character",
+"condition": "has_met_ur_bestie",
+"dialogue": "It's nice to meet you.",
+"go_to_node_id": "",
+"id": "914cf080-f9d2-4328-81c0-7d582027c1f4",
+"next_node_id": "2f9e140c-a35d-4c45-9ec2-0db231d1f0cb",
+"type": "dialogue"
+},
+"e18fc3c4-38cb-4dcf-90a3-447d93bb3671": {
+"character": "Character",
+"dialogue": "Hello!",
+"go_to_node_id": "",
+"id": "e18fc3c4-38cb-4dcf-90a3-447d93bb3671",
+"next_node_id": "914cf080-f9d2-4328-81c0-7d582027c1f4",
+"type": "dialogue"
+}
+}
