@@ -7,9 +7,6 @@ enum{
 
 var state = TALKING
 
-func _ready():
-	Game.show_dialog("e18fc3c4-38cb-4dcf-90a3-447d93bb3671")
-	print("ready")
 func _process(delta):
 	match state:
 		TALKING:
@@ -18,3 +15,9 @@ func _process(delta):
 			ap.play("Idle")
 
 
+
+
+func _on_trigger_area_player_entered():
+	Game.show_dialog("e18fc3c4-38cb-4dcf-90a3-447d93bb3671")
+	print("touched")
+	pass # Replace with function body.

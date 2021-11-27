@@ -76,6 +76,6 @@ func _unhandled_input(event):
 
 
 func _on_Area_area_entered(area):
-	
-	pass
+	Game.show_dialog("e18fc3c4-38cb-4dcf-90a3-447d93bb3671")
+	print("touched")
 
