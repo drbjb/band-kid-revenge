@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Cat_Meowing-SoundBible.com-781322082.wav-18fbff4e4ce93e0e858938ad7c06058e.sample"
+
+[deps]
+
+source_file="res://audio/Cat_Meowing-SoundBible.com-781322082.wav"
+dest_files=[ "res://.import/Cat_Meowing-SoundBible.com-781322082.wav-18fbff4e4ce93e0e858938ad7c06058e.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

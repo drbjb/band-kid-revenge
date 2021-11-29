@@ -32,7 +32,7 @@ func _physics_process(delta):
 	if Input.is_action_pressed("move_right"):
 		dir += basis.x
 	if Input.is_action_just_pressed("meow"):
-		pass
+		$AudioStreamPlayer.play()
 	dir = dir.normalized()
 
 	var speed = walk_speed

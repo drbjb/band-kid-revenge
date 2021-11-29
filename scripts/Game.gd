@@ -4,6 +4,8 @@ extends Node
 
 # use Game.dialog to check if a dialog is open (so you can ignore input)
 var dialog = null
+#audioplayercollisioncheckthing
+var audioplayer = ("res://nodes/audio_player.tscn")
 
 #these variables available in dialog 
 var has_met_ur_bestie = false

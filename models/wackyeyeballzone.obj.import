@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/wackyeyeballzone.obj-6819c7b9d1867bf0d7bc587861104cde.mesh"
+
+[deps]
+
+files=[ "res://.import/wackyeyeballzone.obj-6819c7b9d1867bf0d7bc587861104cde.mesh" ]
+
+source_file="res://models/wackyeyeballzone.obj"
+dest_files=[ "res://.import/wackyeyeballzone.obj-6819c7b9d1867bf0d7bc587861104cde.mesh", "res://.import/wackyeyeballzone.obj-6819c7b9d1867bf0d7bc587861104cde.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true
