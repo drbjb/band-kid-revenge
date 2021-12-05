@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://scenes/bandroom1testmaybe.tscn" type="PackedScene" id=1]
 [ext_resource path="res://nodes/player.tscn" type="PackedScene" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://models/Locker.obj" type="ArrayMesh" id=4]
 [ext_resource path="res://materials/door.jpeg" type="Texture" id=5]
 [ext_resource path="res://nodes/eyes.tscn" type="PackedScene" id=6]
+[ext_resource path="res://nodes/Musicbox.tscn" type="PackedScene" id=7]
 
 [sub_resource type="Environment" id=1]
 background_mode = 1
@@ -51,7 +52,7 @@ navmesh = SubResource( 2 )
 transform = Transform( 1.81355, 0, 0, 0, 1, 0, 0, 0, 1.89996, -4.54073, 0.661442, -4.02755 )
 
 [node name="OmniLight3" type="OmniLight" parent="Navigation/NavigationMeshInstance/school"]
-transform = Transform( -0.551406, 0, 0, 0, -0.999425, 0.0339054, 0, -0.0178453, -0.526025, -5.50576, 3.88701, -0.000652075 )
+transform = Transform( -0.551405, 0, 0, 0, -0.999425, 0.0339054, 0, -0.0178453, -0.526024, -5.50576, 3.88701, -0.000652075 )
 omni_range = 7.07566
 
 [node name="OmniLight6" type="OmniLight" parent="Navigation/NavigationMeshInstance/school"]
@@ -80,6 +81,10 @@ omni_range = 7.07566
 
 [node name="OmniLight4" type="OmniLight" parent="Navigation/NavigationMeshInstance/school"]
 transform = Transform( -0.551406, 0, 0, 0, -0.999425, 0.0339054, 0, -0.0178453, -0.526025, 8.65711, 3.88701, -0.000652075 )
+omni_range = 7.07566
+
+[node name="OmniLight11" type="OmniLight" parent="Navigation/NavigationMeshInstance/school"]
+transform = Transform( -0.551405, 0, 0, 0, -0.999425, 0.0339054, 0, -0.0178453, -0.526024, 13.9362, 3.88701, -0.000652075 )
 omni_range = 7.07566
 
 [node name="OmniLight5" type="OmniLight" parent="Navigation/NavigationMeshInstance/school"]
@@ -371,5 +376,10 @@ transform = Transform( 0.549362, 0.0462631, -0.0104377, -0.0294463, -0.0524286, 
 mesh = SubResource( 5 )
 material/0 = SubResource( 6 )
 
-[node name="eyes" parent="." instance=ExtResource( 6 )]
-transform = Transform( 1.25, 0, 0, 0, 1.25, 0, 0, 0, 1.25, 41.253, -1.16509, -4.60683 )
+[node name="eyes" parent="." groups=[
+"badguy",
+] instance=ExtResource( 6 )]
+transform = Transform( 1.25, 0, 0, 0, 1.25, 0, 0, 0, 1.25, 19.3217, -1.16509, -4.60683 )
+
+[node name="Area" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.26495 )

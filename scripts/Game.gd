@@ -4,6 +4,7 @@ extends Node
 
 # use Game.dialog to check if a dialog is open (so you can ignore input)
 var dialog = null
+var hears_sound = false
 #audioplayercollisioncheckthing
 var audioplayer = ("res://nodes/audio_player.tscn")
 
@@ -26,21 +27,5 @@ func _ready():
 # manage game-wide input
 # this is very simple camera, normally you would put stuff in _process
 # and have a point that the camera moves towards
-func _input(event):
-	# if there is no dialog, use keys to move camera
-	if dialog == null:
-		# find the current viewport camera
-		var camera = get_node("/root").get_viewport().get_camera()
-		
-		if event.is_action_pressed('ui_up'):
-			camera.transform.origin.z -= 1
 
-		if event.is_action_pressed('ui_down'):
-			camera.transform.origin.z += 1
-		
-		if event.is_action_pressed('ui_left'):
-			camera.transform.origin.x -= 1
-
-		if event.is_action_pressed('ui_right'):
-			camera.transform.origin.x += 1
 

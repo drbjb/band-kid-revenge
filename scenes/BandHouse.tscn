@@ -78,7 +78,7 @@ mesh = SubResource( 9 )
 material/0 = null
 
 [node name="portal" parent="trigger_area" instance=ExtResource( 8 )]
-path = "School"
+path = "rod2school"
 
 [connection signal="player_entered" from="lizardguide/trigger_area" to="lizardguide" method="_on_trigger_area_player_entered"]
 [connection signal="player_entered" from="trigger_area" to="trigger_area/portal" method="_on_trigger_area_player_entered"]
